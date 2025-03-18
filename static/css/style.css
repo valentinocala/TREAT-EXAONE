@@ -1,0 +1,283 @@
+/* Modern minimal theme for TREAT inspired by logo colors */
+
+/* Base styles */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Modern sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a12; /* Dark background - almost black */
+    color: #f0f0f8; /* Light text for contrast */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Main container */
+.choco-container {
+    background: rgba(16, 16, 28, 0.85); /* Dark semi-transparent background */
+    box-shadow: 0 8px 40px 0 rgba(104, 56, 248, 0.2); /* Subtle purple glow */
+    border-radius: 24px;
+    padding: 40px;
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth easing */
+    border: 1px solid rgba(104, 56, 248, 0.15); /* Subtle purple border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Modern blur effect */
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #5e72eb, #ff5493, #ff7643); /* Logo-inspired gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px; /* Tighter spacing for modern look */
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.header h1:hover {
+    transform: scale(1.02);
+    background: linear-gradient(90deg, #6c7bff, #ff6ea9, #ff8754); /* Slightly brighter on hover */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: rgba(240, 240, 248, 0.7); /* Slightly transparent white */
+    font-weight: 400;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.highlight {
+    color: #ff7643; /* Orange from logo */
+    font-weight: 500;
+}
+
+/* Main content area */
+.main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form styling */
+.sweet-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    height: 65%;
+    padding: 24px;
+    font-size: 1rem;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    border: none;
+    border-radius: 16px;
+    resize: none;
+    background: rgba(25, 25, 40, 0.7); /* Dark blue-purple background */
+    color: #f0f0f8;
+    box-shadow: inset 0 0 0 1px rgba(104, 56, 248, 0.2); /* Subtle inner glow */
+    transition: all 0.3s ease;
+}
+
+textarea:hover {
+    box-shadow: inset 0 0 0 1px rgba(104, 56, 248, 0.4); /* Stronger glow on hover */
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px rgba(104, 56, 248, 0.6), 0 0 20px rgba(104, 56, 248, 0.2); /* Focused state glow */
+    background: rgba(28, 28, 45, 0.8); /* Slightly lighter when focused */
+}
+
+/* Button styling */
+button {
+    width: 50%;
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 24px;
+    background: linear-gradient(45deg, #5e72eb, #ff5493); /* Purple to pink gradient */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 16px rgba(94, 114, 235, 0.4); /* Subtle shadow */
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(94, 114, 235, 0.6); /* Larger shadow on hover */
+    background: linear-gradient(45deg, #6c7bff, #ff6ea9); /* Brighter gradient on hover */
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Loading bar */
+.loading-bar {
+    display: none;
+    width: 100%;
+    height: 4px;
+    background: rgba(25, 25, 40, 0.5); /* Dark background */
+    margin-top: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-bar::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, #5e72eb, #ff5493, #ff7643); /* Logo-inspired gradient */
+    animation: loading-animation 1.5s infinite ease-in-out; /* Smooth animation */
+    border-radius: 4px;
+}
+
+/* Loading animation */
+@keyframes loading-animation {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(450%);
+    }
+}
+
+/* Results container */
+#results {
+    overflow-x: auto;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 16px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    background: rgba(25, 25, 40, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(104, 56, 248, 0.2);
+}
+
+/* Category tags in results */
+#results .category {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 8px;
+    background: linear-gradient(45deg, #5e72eb, #ff5493); /* Logo-inspired gradient */
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(94, 114, 235, 0.3);
+}
+
+/* Scrollbar styling */
+#results::-webkit-scrollbar {
+    height: 6px;
+}
+
+#results::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #5e72eb, #ff5493); /* Logo-inspired gradient */
+    border-radius: 3px;
+}
+
+#results::-webkit-scrollbar-track {
+    background: rgba(25, 25, 40, 0.5);
+    border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .choco-container {
+        width: 95%;
+        padding: 30px;
+    }
+    
+    .header h1 {
+        font-size: 2.2rem;
+    }
+    
+    button {
+        width: 80%;
+    }
+}
+
+/* Subtle background gradient */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(94, 114, 235, 0.1), transparent 70%),
+                radial-gradient(circle at bottom left, rgba(255, 84, 147, 0.1), transparent 70%);
+    z-index: -1;
+}
+
+/* Subtle floating animation for the container */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.choco-container {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1), float 6s ease-in-out infinite;
+}

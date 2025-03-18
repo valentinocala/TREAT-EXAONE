@@ -1,0 +1,8 @@
+# Ignore virtual environment
+TREAT-EXAONE/
+
+# Ignore __pycache__ folders
+treat/app/__pycache__
+
+# vscode_folder
+.vscode
